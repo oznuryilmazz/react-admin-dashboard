@@ -1,10 +1,17 @@
+import PropTypes from "prop-types";
 import { Link as RouterLink } from "react-router-dom";
 // @mui
 import { useTheme } from "@mui/material/styles";
 import { Box } from "@mui/material";
 
-export default function Logo(props) {
-  const { disabledLink, sx } = props;
+// ----------------------------------------------------------------------
+
+Logo.propTypes = {
+  disabledLink: PropTypes.bool,
+  sx: PropTypes.object,
+};
+
+export default function Logo({ disabledLink = false, sx }) {
   const theme = useTheme();
 
   const PRIMARY_LIGHT = theme.palette.primary.light;
