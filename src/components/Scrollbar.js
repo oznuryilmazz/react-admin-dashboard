@@ -7,11 +7,11 @@ import { styled } from "@mui/material/styles";
 
 // ----------------------------------------------------------------------
 
-const RootStyle = styled("div")({
+const RootStyle = styled("div")(() => ({
   flexGrow: 1,
   height: "100%",
   overflow: "hidden",
-});
+}));
 
 const SimpleBarStyle = styled(SimpleBarReact)(({ theme }) => ({
   maxHeight: "100%",
